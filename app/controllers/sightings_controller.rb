@@ -5,6 +5,11 @@ class SightingsController < ApplicationController
         render json: sightings
       end
 
+      def show
+        sighting = Sighting.find(params[:id])
+        render json: sighting
+      end
+
       def create 
         sighting = Sighting.create(sighting_params)
         render json: sighting
