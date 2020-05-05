@@ -1,9 +1,7 @@
 class SightingSerializer < ActiveModel::Serializer
 
-    attributes :id, :tree
+    attributes :id, :tree_id, :user_id, :tree
 
-    def tree 
-        self.object.tree
-    end
+
 
 end
